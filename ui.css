@@ -35,7 +35,8 @@ body{
 	width:65%;
 	margin:0 auto;
 	text-align:center;
-	padding:15px;
+	padding-top:50px;
+	padding-bottom:50px;
 
 }
 
@@ -139,8 +140,8 @@ h1{
 	font-family:'微軟正黑體';
 	font-size:2em;
 	font-weight:bold;
-	padding:15px;
-	padding-bottom:30px;
+	
+	padding-bottom:50px;
 }
 
 h2{

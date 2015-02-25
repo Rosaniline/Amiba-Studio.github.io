@@ -1,156 +1,178 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.4.1/build/cssreset/cssreset-min.css">
-<link rel="stylesheet" type="text/css" href="https://raw.github.com/necolas/normalize.css/master/normalize.css">
-<link rel="stylesheet" type="text/css" href="ui.css">
+    <script src="js/jquery-2.1.3.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script src="js/bootstrap.min.js"></script>
+
+	
+
  
- 
- <meta charset="utf-8">
-<title>Amiba Studio</title>
+	<title>Amiba Studio</title>
+
+	<script>
+
+		$(document).ready(function(){
+
+			$("a").css({
+				"cursor": "pointer"
+			})
+
+		});
+
+
+		$(document).on("click", ".navbar-brand", function(){
+
+			$("li").removeClass("active");
+
+			$("html, body").animate({
+
+				scrollTop: 0
+
+			}, 500);
+
+		});
+
+		$(document).on("click", ".nav.navbar-nav li", function(){
+
+			$("li").removeClass("active");
+
+			$(this).addClass("active");
+
+			$("html, body").animate({
+
+				scrollTop: $("#div_" + $(this).attr('id')).offset().top
+
+			}, 500);
+		
+		});
+
+	
+
+	</script>
+
 </head>
+
 <body>
 
-<header>
-	
-	<ul id="nav">
-		<!--
-		<li><a href="#about">關於我們</a></li>
-		-->
-		<li><a href="#service">服務項目</a></li>
-		<li><a href="#works">作品錦集</a></li>
-		<li><a href="#cooperation">合作流程</a></li>
-		<li><a href="#contact">連絡我們</a></li>
-	</ul>
-	<a href="index.html">
-	<img src="web_image/logo6.png"alt="Amiba Studio 阿米巴影音工作室" id="logo" border="0" height="130">
-	</a>
-</header>
+
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+        <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<!-- <button>Amiba Studio</button> -->
+			<a class="navbar-brand" style="cursor: pointer;"> Amiba Studio </a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li id="service"><a> 服務項目 </a></li>
+				<li id="work"><a> 作品錦集 </a></li>
+				<li id="flow"><a> 合作流程 </a></li>
+				<li id="contact"><a> 聯絡我們 </a></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"> Right </a></li>
+			</ul>
+        </div><!--/.nav-collapse -->
+	</div>
+</nav>
+
+
 
 <div id="banner">
-	<img src="web_image/banner_new.jpg" width="100%" alt="台北調-寄望台北城" id="img_banner">
-</div>
 
-<!--
-<div id="about">
-
-	<article id="our_dream">
-		
-	佐著合適的音樂，曲折的情節更加動人<br>
-	配著詭譎的音效，矛盾的的氣氛更讓人緊張<br>
-	<br><br>
-	用最專業的角度  以最謙卑的態度
-	<br><br>
-	用最誠摯的聲音  替您的影片上色
-
-
-	</article>
+	<img src="web_image/banner_1.jpg" width="100%" alt="台北調-寄望台北城" id="img_banner">
 
 </div>
--->
-
-<div id="service">
-<h1>服務項目</h1>
-	<span class="item">
-		<img src="web_image/icon_radio.png"><br>
-		<h3>音效製作</h3>
-			廣告音效 <br>
-			遊戲音效<br>
-			戲劇音效製作<br>
-	</span>
-	
-	<span class="item">
-		<img src="web_image/icon_sax.png"><br>
-		<h3>音樂製作</h3>
-			影像配樂 <br>
-			單曲Demo製作 <br>
-			遊戲配樂製作 <br>
-	</span>
-	
-	<span class="item">
-		<img src="web_image/icon_microphone.png"><br>
-		<h3>錄音服務</h3>
-			多軌數位錄音 <br>
-			戲劇對白錄音 <br>
-			歌曲錄音 <br>
-	</span>
-	
-	<span class="item">
-		<img src="web_image/design.png"><br>
-		<h3>平面美工</h3>
-			網路EDM製作 <br>
-			Baner製作 <br>
-			專輯封面設計 <br>
-	</span>
-</div>
-
-<!---------------------------------作品集---------------------------------------->
 
 
+<div id="div_service" class="container" style="padding:10%;">
+	<h1 align="center" style="padding-bottom:10%">服務項目</h1>
 
-<!------------------->
-<div class="works">
-	
-	<div class="tableContainer">
-		
-		<div class="tableRow">
-			<div class="film">
-			<iframe src="http://player.vimeo.com/video/108982087" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-			
-			</div>
-			<div class="introduce">
-			<h3> Tiffany's Movie Dream</h3>
-					這是一個放棄現有的優渥環境，<br>勇敢去追夢的故事。<br>
-					<br>
-					Producer: Tiffany<br>
-					Director: Euwu<br>
-					Cinmatographer: Chee Lin<br>
-					Assistant: Ray<br>
-					Music: Amiba Studio<br>
-					Mixing: Amiba Studio<br>
-							
-			</div>
+	<div class="row" align="center">
+
+		<div class="col-md-3">
+			<img src="web_image/icon_radio.png"><br>
+			<h3>音效製作</h3>
+				廣告音效 <br>
+				遊戲音效<br>
+				戲劇音效製作<br>
 		</div>
+
+		<div class="col-md-3">
+			<img src="web_image/icon_sax.png"><br>
+			<h3>音樂製作</h3>
+				影像配樂 <br>
+				單曲Demo製作 <br>
+				遊戲配樂製作 <br>
+		</div>
+
+		<div class="col-md-3">
+			<img src="web_image/icon_microphone.png"><br>
+			<h3>錄音服務</h3>
+			<p>
+				多軌數位錄音 <br>
+				戲劇對白錄音 <br>
+				歌曲錄音 <br>
+			</p>
+		</div>
+
+		<div class="col-md-3">
+
+			<img src="web_image/design.png"><br>
+			<h3>平面美工</h3>
+				網路EDM製作 <br>
+				Baner製作 <br>
+				專輯封面設計 <br>
+		</div>
+
 	</div>
 
-</div>
-<div class="works" id="works">
-	<div class="tableContainer">
-		<div class="tableRow">
-			<div class="film">
-			<iframe src="http://www.youtube.com/embed/32ar1OfqHdw" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-			
-			</div>
-			<div class="introduce">
-			<h3> 台北調 《寄望台北城》</h3>
-					這是一首現實和理想有段差距，<br>但仍堅持信仰，咬牙向前的心情。<br>
-					這首歌從82首歌中脫穎而出，<br>收錄到《台北調》專輯中。<br>
-					<br>
-					Lyrics: Lee Hung<br>
-					Composer: Lee Hung , Zhang Yung Cheng<br>
-					Arranger: Amiba Studio、Arzar Studio<br>
-					Guitar: David Ching<br>
-					Mixing: Andy.Baker<br>
-					Producer: Jacky Chen
-							
-			</div>
-		</div>
-	</div>
 
 </div>
 
-<footer id="contact">
+<div id="div_work" align="center" style="color: #BDBDBD; padding: 20%;">
 	
-	<h2>阿米巴影音工作室</h2>
-	<h3>Amiba Studio </h3><br>
-	電話：0958290006<br>
+	<h1> 作品錦集 </h1>
+	
+
+</div>
+
+<div id="div_flow" align="center" style="color: #BDBDBD; padding: 20%;">
+	
+	<h1> 合作流程 </h1>
+	
+
+</div>
+
+<div id="div_contact" align="center" style="color: #BDBDBD; padding: 20%;">
+	
+	<h3>阿米巴影音工作室 | Amiba Studio</h3>
 	信箱：amiba_studio@gmail.com<br>
 	地址：台北市大安區復興南路<br>
+	電話：0958290006<br>
 	
 
-</footer>
+</div>
+
 </body>
 </html>
 
